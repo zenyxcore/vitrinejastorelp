@@ -7,7 +7,7 @@
     },
     {
       "source": "/:path*",
-      "destination": "https://vitrinejastore.lovable.app/:path*"
+      "destination": "https://app.vitrineja.store/:path*"
     }
   ]
 }
