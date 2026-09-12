@@ -445,6 +445,72 @@ body{font-family:'Manrope',system-ui,sans-serif;line-height:1.6}h1,h2,h3{letter-
 .oferta-single .btn{ width:100%; }
 .oferta-single .upgrade-note{ font-size:.85rem; color:#8b9bb5; font-weight:500; max-width:350px; line-height:1.55; margin:0; }
 .oferta-single .pay-note{ font-size:.82rem; color:#b6bacb; font-weight:700; letter-spacing:.03em; margin:0; }
+
+/* ===== VitrineJá Premium 2026 — design refresh, leve e sem novos assets ===== */
+/* Fundo global escuro elimina o "box branco" no fim da página */
+html{ background:#05060c; }
+body{ background:#05060c; }
+
+/* Navbar: vidro + borda refinada */
+.navbar.scrolled{ background:rgba(8,10,22,.78); backdrop-filter:blur(18px) saturate(150%); border-bottom-color:rgba(255,255,255,.10); box-shadow:0 12px 40px -24px rgba(0,0,0,.8); }
+.nav-logo img{ filter:drop-shadow(0 0 14px rgba(139,63,251,.35)); }
+
+/* Hero: gradiente aurora mais profundo + glow das marcas */
+.hero{ background:radial-gradient(130% 100% at 12% 0%, #1b2350 0%, var(--navy) 40%, #070912 100%); }
+.hero-copy h1{ letter-spacing:-.04em; }
+.hero-copy .sub{ font-size:clamp(1.02rem,2.4vw,1.22rem); line-height:1.7; }
+.grad-text{ background-size:200% 200%; animation:gradShift 9s ease-in-out infinite; }
+@keyframes gradShift{ 0%,100%{background-position:0% 50%} 50%{background-position:100% 50%} }
+
+/* Botões premium: gradiente + brilho + micro-interação */
+.btn-primary{ background:linear-gradient(120deg,#8b3ffb 0%,#6d5cff 50%,#3f7bfb 100%); box-shadow:0 12px 34px -10px rgba(139,63,251,.65), inset 0 1px 0 rgba(255,255,255,.25); }
+.btn-primary:hover{ transform:translateY(-2px); box-shadow:0 18px 40px -12px rgba(139,63,251,.8); }
+.btn{ transition:transform .3s cubic-bezier(.22,.9,.32,1), box-shadow .3s, filter .3s; }
+
+/* Cards de exemplo: vidro, borda sutil, hover com elevação + anel primário */
+.ex-card{ background:linear-gradient(180deg,#1b1d38 0%,#12142a 100%); border:1px solid rgba(255,255,255,.09); box-shadow:inset 0 1px 0 rgba(255,255,255,.05); }
+.ex-card:hover{ transform:translateY(-10px); border-color:rgba(139,63,251,.5); box-shadow:0 34px 70px -22px rgba(139,63,251,.45), inset 0 1px 0 rgba(255,255,255,.08); }
+.ex-frame{ border-color:rgba(255,255,255,.12); }
+
+/* Cards de features: refinado, leve, elevável */
+.features{ background:linear-gradient(180deg,#f6f5fb 0%,#fbfaff 60%,#f3f1fa 100%); }
+.feat-card{ border:1px solid rgba(11,14,26,.05); box-shadow:0 1px 0 rgba(255,255,255,.9) inset, 0 10px 26px -18px rgba(11,14,26,.18); backdrop-filter:blur(6px); }
+.feat-card:hover{ transform:translateY(-5px); box-shadow:0 26px 46px -20px rgba(91,63,251,.28); border-color:rgba(91,63,251,.22); }
+.feat-icon{ background:linear-gradient(120deg,#f1ecff,#ebedff); border:1px solid rgba(91,63,251,.15); }
+.feat-card h3{ letter-spacing:-.02em; }
+
+/* Caixa da oferta: cartão premium central */
+.oferta-single{ background:linear-gradient(180deg,#1d1f3c 0%,#141630 100%); border:1px solid rgba(255,255,255,.10); box-shadow:0 40px 90px -30px rgba(139,63,251,.5), inset 0 1px 0 rgba(255,255,255,.08); position:relative; overflow:hidden; }
+.oferta-single::before{ content:''; position:absolute; top:-60%; left:50%; transform:translateX(-50%); width:140%; height:120%; background:radial-gradient(circle at 50% 0%, rgba(91,63,251,.35), transparent 60%); pointer-events:none; }
+.oferta-single .btn{ position:relative; z-index:1; }
+.oferta-single li svg{ filter:drop-shadow(0 0 6px rgba(62,242,166,.5)); }
+
+/* Passos: cards refinados */
+.step{ background:linear-gradient(180deg,#fbfaff 0%,#f3f1fa 100%); border:1px solid rgba(11,14,26,.05); box-shadow:0 12px 30px -20px rgba(11,14,26,.15); transition:transform .3s, box-shadow .3s; }
+.step:hover{ transform:translateY(-4px); box-shadow:0 24px 44px -22px rgba(91,63,251,.28); }
+.step-num{ background:linear-gradient(120deg,#8b3ffb,#3f7bfb); color:#fff; box-shadow:0 10px 22px -8px rgba(139,63,251,.5); }
+
+/* CTA final + footer: preto profundo contínuo até o fim (corrige o box branco) */
+.cta-final{ background:linear-gradient(170deg,#070912 0%, var(--navy) 55%, #10132a 100%); }
+footer{ background:linear-gradient(180deg,#0a0d1c 0%, #05060c 100%); border-top:1px solid rgba(255,255,255,.08); padding-bottom:120px; }
+.footer-contact-item{ color:rgba(255,255,255,.86); }
+.footer-contact-item svg{ filter:drop-shadow(0 0 5px rgba(139,63,251,.4)); }
+.footer-tag{ color:var(--muted-dark); }
+.footer-copy{ color:rgba(255,255,255,.32); }
+
+/* Links de navegação animados */
+.nav-links a{ position:relative; }
+.nav-links a::after{ content:''; position:absolute; left:0; bottom:-5px; width:0; height:2px; background:var(--brand-gradient); transition:width .28s var(--ease); }
+.nav-links a:hover::after{ width:100%; }
+
+/* seções claras mantêm leveza; só separadores sutis */
+.solucao, .como{ background:#ffffff; }
+
+/* Micro-interação nos CTAs com seta */
+.btn-primary:hover svg, .btn:hover svg{ transform:translateX(2px); }
+.btn svg{ transition:transform .25s var(--ease); }
+
+@media (prefers-reduced-motion:reduce){ .grad-text{ animation:none; } }
 </style>
 </head>
 <body>
