@@ -515,6 +515,38 @@ footer{ background:linear-gradient(180deg,#0a0d1c 0%, #05060c 100%); border-top:
 }
 @media (prefers-reduced-motion:reduce){ .grad-text{ animation:none; } }
 
+
+/* Oferta: hierarquia de valor e clareza comercial */
+.offer-heading{max-width:720px}
+.offer-heading p{max-width:650px}
+.oferta-single{max-width:650px;padding:40px 30px;gap:18px}
+.offer-badge{position:relative;z-index:1;padding:7px 12px;border-radius:999px;background:rgba(196,177,255,.12);border:1px solid rgba(196,177,255,.28);color:#d8ccff;font-size:.68rem;font-weight:800;letter-spacing:.1em}
+.oferta-single h3{position:relative;z-index:1;font-size:clamp(1.45rem,4vw,2rem);max-width:460px}
+.offer-intro{position:relative;z-index:1;max-width:500px;color:#b6bacb;font-size:.94rem;line-height:1.65}
+.offer-price-block{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;padding:8px 0 4px}
+.offer-price-block .price-tag{margin:0}
+.offer-price-block .oferta-note{margin:-6px 0 12px;color:#b6bacb;font-weight:700;font-size:.78rem;letter-spacing:.04em;text-transform:uppercase}
+.no-monthly{display:inline-flex;align-items:center;padding:8px 13px;border-radius:999px;background:rgba(62,242,166,.10);border:1px solid rgba(62,242,166,.25);color:#8ff6c7;font-size:.78rem;font-weight:800}
+.offer-includes{position:relative;z-index:1;width:100%;max-width:520px;text-align:left;padding:22px;border-radius:20px;background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.08)}
+.offer-includes>strong{display:block;margin-bottom:14px;font-size:.88rem;color:#fff}
+.oferta-single .offer-includes ul{max-width:none;margin:0;gap:14px}
+.oferta-single .offer-includes li{align-items:flex-start}
+.offer-includes li svg{margin-top:2px}
+.offer-includes li span{display:flex;flex-direction:column;gap:2px}
+.offer-includes li b{font-size:.9rem;color:#fff}
+.offer-includes li small{color:#9ea4b9;font-weight:500;font-size:.77rem;line-height:1.45}
+.oferta-single .pay-note{position:relative;z-index:1;max-width:520px;line-height:1.55;color:#c3c7d7}
+.expansion-card>span{font-size:.65rem;font-weight:800;letter-spacing:.08em;color:#bdaaff}
+.expansion-card strong{font-size:1.05rem}
+.expansion-card b{font-size:1.2rem}
+.expansion-note strong{color:#fff}
+@media(max-width:719px){
+  .oferta-single{padding:30px 18px;border-radius:24px}
+  .offer-includes{padding:18px 15px}
+  .offer-intro{font-size:.9rem}
+  .expansion{margin-top:38px;padding-top:34px}
+}
+
 /* Escada de crescimento opcional */
 .expansion{max-width:900px;margin:48px auto 0;padding-top:40px;border-top:1px solid rgba(255,255,255,.12);color:#fff}
 .expansion-head{text-align:center;max-width:620px;margin:0 auto 26px}
@@ -707,38 +739,50 @@ footer{ background:linear-gradient(180deg,#0a0d1c 0%, #05060c 100%); border-top:
 <!-- ================= OFERTA ================= -->
 <section class="oferta" id="oferta">
 <div class="container">
-<div class="section-head">
-<span class="kicker">COMECE PEQUENO. CRESÇA NO SEU TEMPO.</span>
-<h2>Comece sem mensalidade.<br/><span class="grad-text">Cresça quando estiver pronta.</span></h2>
-<p>Você não precisa assumir mais uma conta mensal para colocar seu negócio na internet.</p>
+<div class="section-head offer-heading">
+<span class="kicker">UMA VITRINE DE VERDADE PARA O SEU NEGÓCIO</span>
+<h2>Organize seus produtos.<br/><span class="grad-text">Facilite seus pedidos.</span></h2>
+<p>Você mesma cria, personaliza e atualiza sua vitrine. Seus clientes escolhem os produtos e enviam o pedido organizado pelo WhatsApp.</p>
 </div>
+
 <div class="oferta-single">
-<span class="plan-label">VITRINE INICIAL</span>
+<div class="offer-badge">ACESSO INICIAL</div>
+<h3>Sua vitrine completa para começar</h3>
+<p class="offer-intro">Ideal para confeiteiras, artesãs, lojas pequenas e quem quer vender melhor sem assumir mais uma conta todo mês.</p>
+
+<div class="offer-price-block">
 <div class="price-tag"><span class="cur">R$</span><span class="val">29,90</span></div>
-<p class="oferta-note">pagamento único — não é assinatura</p>
-<ul>
-<li><svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"></path></svg>Até 30 produtos</li>
-<li><svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"></path></svg>Vitrine ativa sem prazo</li>
-<li><svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"></path></svg>Seu próprio painel para editar tudo</li>
-<li><svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"></path></svg>Categorias e identidade personalizada</li>
-<li><svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"></path></svg>Carrinho e pedidos pelo WhatsApp</li>
-<li><svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"></path></svg>Link próprio para compartilhar</li>
-</ul>
-<button class="btn btn-primary" data-cta="" data-ctx="oferta">CRIAR MINHA VITRINE</button>
-<p class="pay-note">Você paga uma vez e pode continuar com até 30 produtos sem mensalidade.</p>
+<p class="oferta-note">pagamento único</p>
+<span class="no-monthly">Sem mensalidade para até 30 produtos</span>
 </div>
+
+<div class="offer-includes">
+<strong>O que você recebe:</strong>
+<ul>
+<li><svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"></path></svg><span><b>Vitrine personalizada</b><small>Com sua logo, cores, capa e informações do negócio.</small></span></li>
+<li><svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"></path></svg><span><b>Até 30 produtos</b><small>Cadastre fotos, preços, descrições e categorias.</small></span></li>
+<li><svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"></path></svg><span><b>Carrinho conectado ao WhatsApp</b><small>O cliente escolhe e envia o pedido já organizado.</small></span></li>
+<li><svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"></path></svg><span><b>Painel para editar quando quiser</b><small>Altere produtos e aparência pelo celular ou computador.</small></span></li>
+<li><svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"></path></svg><span><b>Link pronto para compartilhar</b><small>Use no Instagram, WhatsApp e onde seus clientes estiverem.</small></span></li>
+</ul>
+</div>
+
+<button class="btn btn-primary" data-cta="" data-ctx="oferta">QUERO CRIAR MINHA VITRINE</button>
+<p class="pay-note">Você paga uma vez. Sua vitrine permanece ativa sem prazo enquanto estiver dentro do limite de 30 produtos.</p>
+</div>
+
 <div class="expansion">
 <div class="expansion-head">
-<span class="kicker">SÓ QUANDO PRECISAR DE MAIS ESPAÇO</span>
-<h3>Sua loja cresceu? Faça upgrade.</h3>
-<p>Os planos mensais são opcionais e só entram quando você quiser ultrapassar os 30 produtos.</p>
+<span class="kicker">NÃO PRECISA ESCOLHER AGORA</span>
+<h3>Se o seu negócio crescer, sua vitrine cresce junto.</h3>
+<p>Continue no acesso inicial pelo tempo que quiser. A mensalidade só começa se você decidir cadastrar mais de 30 produtos.</p>
 </div>
 <div class="expansion-grid">
-<div class="expansion-card"><strong>Até 50</strong><span>produtos</span><b>R$ 9,90<small>/mês</small></b></div>
-<div class="expansion-card"><strong>Até 100</strong><span>produtos</span><b>R$ 19,90<small>/mês</small></b></div>
-<div class="expansion-card"><strong>Até 300</strong><span>produtos</span><b>R$ 29,90<small>/mês</small></b></div>
+<div class="expansion-card"><span>EXPANSÃO 50</span><strong>Até 50 produtos</strong><b>R$ 9,90<small>/mês</small></b></div>
+<div class="expansion-card"><span>EXPANSÃO 100</span><strong>Até 100 produtos</strong><b>R$ 19,90<small>/mês</small></b></div>
+<div class="expansion-card"><span>EXPANSÃO 300</span><strong>Até 300 produtos</strong><b>R$ 29,90<small>/mês</small></b></div>
 </div>
-<p class="expansion-note">Sem upgrade, nada muda: sua vitrine com até 30 produtos continua ativa e sem cobrança mensal.</p>
+<p class="expansion-note"><strong>Importante:</strong> não fazer upgrade não bloqueia nem apaga sua vitrine. Você continua usando normalmente com até 30 produtos.</p>
 </div>
 </div>
 </section>
