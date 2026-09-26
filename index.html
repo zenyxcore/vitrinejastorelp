@@ -955,9 +955,26 @@ a:focus-visible,button:focus-visible{outline:3px solid #8056e8;outline-offset:4p
 
   // ======= CTA DE CRIAÇÃO =======
   const CREATE_STORE_URL = "https://app.vitrineja.store/login?cadastro=1";
-
+  const signupUrl = new URL(CREATE_STORE_URL);
+  signupUrl.searchParams.set("origem", "lp");
+  let clickId;
+  try {
+    clickId = sessionStorage.getItem("vitrineja_lp_click");
+    if (!clickId) {
+      clickId = crypto.randomUUID();
+      sessionStorage.setItem("vitrineja_lp_click", clickId);
+    }
+  } catch {
+    clickId = crypto.randomUUID();
+  }
+  signupUrl.searchParams.set("vj_click", clickId);
+  const campaignParams = new URLSearchParams(window.location.search);
+  for (const key of ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term"]) {
+    const value = campaignParams.get(key);
+    if (value) signupUrl.searchParams.set(key, value.slice(0, 150));
+  }
   document.querySelectorAll("[data-cta]").forEach(link => {
-    link.href = CREATE_STORE_URL;
+    link.href = signupUrl.toString();
   });
 
 
