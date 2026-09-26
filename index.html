@@ -694,17 +694,13 @@ a:focus-visible,button:focus-visible{outline:3px solid #8056e8;outline-offset:4p
 @media(prefers-reduced-motion:reduce){.support-float{transition:none}.support-float:hover{transform:none}}
 
 
-/* Primeiro motivo para seguir até as vitrines reais */
-.difference{padding:76px 0 78px}
-.difference .section-head{max-width:860px;margin:0 auto;text-align:center}
-.difference .section-head h2{max-width:820px;margin:0 auto;font-size:clamp(2.15rem,5vw,3.35rem);line-height:1.11;letter-spacing:-.04em}
-.difference .section-head p{max-width:680px;margin:20px auto 0;font-size:clamp(1rem,2vw,1.14rem);line-height:1.65}
-.difference-demo-link{display:inline-flex;align-self:center;width:max-content;max-width:100%;align-items:center;justify-content:center;gap:13px;min-height:49px;margin-top:27px;padding:11px 21px;border:1px solid #dcd3f0;border-radius:999px;background:#fff;color:#4a2ba3;font-size:.96rem;font-weight:750;text-decoration:none;box-shadow:0 9px 25px rgba(38,24,89,.075);transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease}
-.difference-demo-link:hover{transform:translateY(-2px);border-color:#ad92e4;box-shadow:0 13px 29px rgba(38,24,89,.13)}
-.difference-demo-link span{font-size:1.13rem}
-.difference-demo-link:focus-visible{outline:3px solid #8056e8;outline-offset:4px}
-@media(max-width:719px){.difference{padding:58px 0 62px}.difference .section-head h2{font-size:clamp(2rem,8vw,2.45rem)}.difference .section-head p{margin-top:16px}.difference-demo-link{width:100%;margin-top:23px}}
-@media(prefers-reduced-motion:reduce){.difference-demo-link{transition:none}.difference-demo-link:hover{transform:none}}
+/* Dor de vender por mensagens, em uma pausa visual antes das demos */
+.difference{position:relative;padding:82px 0 86px;background:radial-gradient(ellipse at 14% 12%,rgba(155,99,227,.32),transparent 46%),linear-gradient(118deg,#33205f 0%,#4b2d82 50%,#2c2865 100%);border-top:1px solid rgba(192,162,255,.18);border-bottom:1px solid rgba(192,162,255,.18)}
+.difference .section-head{position:relative;max-width:860px;margin:0 auto;text-align:center}
+.difference .section-head .kicker{color:#ded0ff}
+.difference .section-head h2{max-width:820px;margin:0 auto;color:#fff;font-size:clamp(2.15rem,5vw,3.35rem);line-height:1.12;letter-spacing:-.04em}
+.difference .section-head p{max-width:680px;margin:22px auto 0;color:#f2edff;font-size:clamp(1rem,2vw,1.14rem);font-weight:450;line-height:1.67}
+@media(max-width:719px){.difference{padding:68px 0 72px;background:radial-gradient(ellipse at 0% 0%,rgba(155,99,227,.3),transparent 60%),linear-gradient(145deg,#372166 0%,#482d7d 55%,#2c2865 100%)}.difference .section-head h2{font-size:clamp(2rem,8vw,2.45rem)}.difference .section-head p{margin-top:18px}}
 
 </style>
 </head>
@@ -751,7 +747,6 @@ a:focus-visible,button:focus-visible{outline:3px solid #8056e8;outline-offset:4p
       <span class="kicker">MENOS MENSAGENS, MAIS CLAREZA</span>
       <h2 id="difference-title">Chega de enviar foto e preço produto por produto.</h2>
       <p>Compartilhe um único link. Seu cliente vê os produtos, escolhe com calma e envia o pedido completo para o seu WhatsApp. Você confirma os detalhes da venda.</p>
-      <a class="difference-demo-link" href="#exemplos">Ver vitrines funcionando <span aria-hidden="true">↓</span></a>
     </div>
   </div>
 </section>
