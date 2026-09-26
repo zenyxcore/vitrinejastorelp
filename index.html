@@ -599,7 +599,6 @@ footer{ background:linear-gradient(180deg,#0a0d1c 0%, #05060c 100%); border-top:
 
 /* 2026 campaign refresh */
 .hero{padding:106px 0 88px;background:radial-gradient(80% 75% at 50% 12%,#20204a 0%,#101329 48%,#080a16 100%)}
-.hero::after{content:"";position:absolute;z-index:1;inset:auto 0 0;height:125px;background:linear-gradient(180deg,transparent,#f7f7fb);pointer-events:none}
 .hero-inner,.hero-inner .hero-copy{display:flex;flex-direction:column;align-items:center;text-align:center}
 .hero-inner{gap:18px}
 .hero-inner .hero-copy{max-width:800px;gap:16px;position:relative;z-index:2}
@@ -632,23 +631,14 @@ footer{ background:linear-gradient(180deg,#0a0d1c 0%, #05060c 100%); border-top:
 .difference-card p{font-size:.91rem;line-height:1.55;color:#65657b}
 .difference-note{max-width:750px;margin:23px auto 0;text-align:center;color:#6c6c7e;font-size:.84rem;line-height:1.5}
 @media(max-width:719px){.difference{padding:54px 0 72px}.difference-grid{grid-template-columns:1fr;gap:11px}.difference-card{min-height:0;padding:19px 20px}.difference-icon{margin-bottom:12px}.difference-note{margin-top:18px}}
-.exemplos{background:linear-gradient(180deg,#f7f7fb 0%,#18182d 12%,#090b18 100%);padding:112px 0 90px}
+.exemplos{background:#090b18;padding:96px 0 90px}
 .exemplos .section-head{max-width:700px}
-.painel-showcase{background:linear-gradient(180deg,#090b18 0%,#f7f7fb 14%,#f7f7fb 100%);padding-top:135px}
-.use-cases{background:#f7f7fb;padding:30px 0 96px}
-.use-cases .section-head{max-width:740px}
-.use-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
-.use-card{padding:27px 24px;border-radius:23px;background:#fff;border:1px solid #e7e6ef;box-shadow:0 18px 44px -36px rgba(36,29,77,.35)}
-.use-type{display:block;min-height:32px;color:#6a4acb;font-size:.68rem;font-weight:800;letter-spacing:.075em}
-.use-card h3{margin:4px 0 10px;color:#17152b;font-size:1.18rem}
-.use-card p{color:#5e6275;font-size:.9rem;line-height:1.6}
-.use-disclaimer{margin:17px 0 0;text-align:center;color:#77788b;font-size:.76rem}
-@media(max-width:719px){.use-cases{padding:22px 0 72px}.use-grid{grid-template-columns:1fr;gap:10px}.use-card{padding:22px}.use-type{min-height:0}}
+.painel-showcase{background:#f7f7fb;padding-top:96px}
 .como{background:#fff;padding:88px 0 94px}
 .como .steps{max-width:1040px}
 .como .step{flex:1;background:#f8f7fb;border:1px solid #e9e6ef;box-shadow:none}
 @media(max-width:719px){.como{padding:66px 0 74px}}
-.oferta{background:linear-gradient(180deg,#fff 0%,#111428 15%,#090b18 100%);padding:130px 0 104px}
+.oferta{background:#090b18;padding:96px 0 104px}
 .offer-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(300px,390px);gap:55px;align-items:center;max-width:1020px;margin:0 auto;padding:44px;border:1px solid rgba(255,255,255,.1);border-radius:28px;background:linear-gradient(145deg,#1b1d37,#121426);box-shadow:0 30px 80px -50px rgba(0,0,0,.8)}
 .offer-kicker{display:inline-block;color:#bdb0fa;font-size:.71rem;font-weight:800;letter-spacing:.1em}
 .offer-copy h2{max-width:510px;margin:14px 0;font-size:clamp(1.9rem,4vw,3rem);line-height:1.12;color:#fff}
@@ -665,7 +655,7 @@ footer{ background:linear-gradient(180deg,#0a0d1c 0%, #05060c 100%); border-top:
 .offer-checkout p{max-width:270px;color:#707083;font-size:.8rem;line-height:1.48}
 .offer-footer{max-width:600px;margin:24px auto 0;text-align:center;color:#afb2c4;font-size:.82rem}
 @media(max-width:800px){.offer-layout{grid-template-columns:1fr;gap:30px;padding:28px}.offer-checkout{max-width:440px;width:100%;margin:0 auto}}
-@media(max-width:719px){.oferta{padding:100px 0 75px}.offer-layout{padding:23px 18px;gap:25px;border-radius:24px}.offer-copy h2{font-size:2rem}.offer-simple-list{gap:11px;margin-top:21px}.offer-checkout{padding:27px 20px}.offer-big-price{font-size:4.5rem}}
+@media(max-width:719px){.oferta{padding:72px 0 75px}.offer-layout{padding:23px 18px;gap:25px;border-radius:24px}.offer-copy h2{font-size:2rem}.offer-simple-list{gap:11px;margin-top:21px}.offer-checkout{padding:27px 20px}.offer-big-price{font-size:4.5rem}}
 .reveal{transform:translateY(16px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.8,.2,1)}
 .difference-card:nth-child(2),.use-card:nth-child(2){transition-delay:.08s}
 .difference-card:nth-child(3),.use-card:nth-child(3){transition-delay:.16s}
@@ -793,22 +783,6 @@ footer{ background:linear-gradient(180deg,#0a0d1c 0%, #05060c 100%); border-top:
 </article>
 </div>
 </div>
-</section>
-<!-- ================= USOS DAS DEMOS ================= -->
-<section class="use-cases">
-  <div class="container">
-    <div class="section-head reveal">
-      <span class="kicker">NA PRÁTICA</span>
-      <h2>Uma vitrine para o jeito que você vende.</h2>
-      <p>Três exemplos de como um catálogo organizado ajuda o cliente a escolher e facilita a conversa no WhatsApp.</p>
-    </div>
-    <div class="use-grid">
-      <article class="use-card reveal"><span class="use-type">MODA FEMININA · DEMONSTRAÇÃO</span><h3>Menina Atrevida</h3><p>Peças, fotos e preços em um só lugar para o cliente montar a seleção antes de chamar a loja.</p></article>
-      <article class="use-card reveal"><span class="use-type">BELEZA · DEMONSTRAÇÃO</span><h3>Bella Beauty</h3><p>Produtos e kits organizados por categoria, sem espalhar as opções em várias mensagens.</p></article>
-      <article class="use-card reveal"><span class="use-type">CONFEITARIA · DEMONSTRAÇÃO</span><h3>Doces da Duda</h3><p>O cliente escolhe sabores e quantidades, e a loja recebe a lista para confirmar os detalhes.</p></article>
-    </div>
-    <p class="use-disclaimer">Exemplos ilustrativos das vitrines demonstradas acima; não são depoimentos de clientes.</p>
-  </div>
 </section>
 <!-- ================= COMO CRIAR ================= -->
 <section class="como" id="como-funciona">
