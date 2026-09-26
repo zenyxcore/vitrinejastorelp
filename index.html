@@ -609,7 +609,7 @@ footer{ background:linear-gradient(180deg,#0a0d1c 0%, #05060c 100%); border-top:
 <a href="#exemplos">Exemplos</a>
 <a href="#oferta">Oferta</a><a href="https://vitrinejastore.lovable.app/login">Acessar painel ↗</a></div>
 <div class="nav-right">
-<button class="btn btn-primary btn-sm" data-cta="" data-desktop-cta="" style="display:none">Criar minha Vitrine →</button>
+<a class="btn btn-primary btn-sm" data-cta="" data-desktop-cta="" style="display:none" href="https://vitrinejastore.lovable.app/login?cadastro=1">Criar minha Vitrine →</a>
 <button aria-controls="mobile-menu" aria-expanded="false" aria-label="Abrir menu" class="nav-menu-btn" type="button">☰</button>
 </div>
 </div>
@@ -626,7 +626,7 @@ footer{ background:linear-gradient(180deg,#0a0d1c 0%, #05060c 100%); border-top:
 <h1>Crie sua vitrine online por <span class="grad-text">R$37</span>.</h1>
 <p class="sub">Monte sua vitrine, veja como ficou e só pague para ativar seu link. Depois, receba pedidos organizados pelo WhatsApp.</p>
 <div class="hero-ctas">
-<button class="btn btn-primary" data-cta="">CRIAR MINHA VITRINE</button>
+<a class="btn btn-primary" data-cta="" href="https://vitrinejastore.lovable.app/login?cadastro=1">CRIAR MINHA VITRINE</a>
 <a class="btn btn-ghost" href="#exemplos">Ver demonstrações ↓</a>
 </div>
 <p class="hero-trust">Pagamento único • Suporte especializado</p>
@@ -726,7 +726,7 @@ footer{ background:linear-gradient(180deg,#0a0d1c 0%, #05060c 100%); border-top:
 <button aria-label="Ir para exemplo 3" class="ex-dot" data-ex-dot="2" type="button"></button>
 </div>
 <div class="container ex-cta reveal">
-<button class="btn btn-primary" data-cta="">Quero uma Vitrine assim</button>
+<a class="btn btn-primary" data-cta="" href="https://vitrinejastore.lovable.app/login?cadastro=1">Quero uma Vitrine assim</a>
 </div>
 </section>
 <!-- ================= O QUE TEM ================= -->
@@ -824,7 +824,7 @@ footer{ background:linear-gradient(180deg,#0a0d1c 0%, #05060c 100%); border-top:
 </ul>
 </div>
 
-<button class="btn btn-primary" data-cta="" data-ctx="oferta">QUERO CRIAR MINHA VITRINE</button>
+<a class="btn btn-primary" data-cta="" data-ctx="oferta" href="https://vitrinejastore.lovable.app/login?cadastro=1">QUERO CRIAR MINHA VITRINE</a>
 <p class="pay-note">Você paga uma vez. Sua vitrine permanece ativa sem prazo enquanto estiver dentro do limite de 30 produtos.</p>
 </div>
 
@@ -850,7 +850,7 @@ footer{ background:linear-gradient(180deg,#0a0d1c 0%, #05060c 100%); border-top:
 <div class="container cta-final-inner reveal">
 <h2>Veja sua vitrine antes de pagar.</h2>
 <p>Monte sua vitrine grátis. Para publicar seu link com até 30 produtos, pague R$37 uma única vez.</p>
-<button class="btn btn-primary" data-cta="">QUERO COMEÇAR SEM MENSALIDADE ↗</button>
+<a class="btn btn-primary" data-cta="" href="https://vitrinejastore.lovable.app/login?cadastro=1">QUERO COMEÇAR SEM MENSALIDADE ↗</a>
 <small>Até 30 produtos, sem prazo e sem cobrança recorrente.</small>
 </div>
 </section>
@@ -879,7 +879,7 @@ footer{ background:linear-gradient(180deg,#0a0d1c 0%, #05060c 100%); border-top:
 </div>
 </footer>
 <div class="mobile-cta">
-<button class="btn btn-primary" data-cta="">Criar minha Vitrine →</button>
+<a class="btn btn-primary" data-cta="" href="https://vitrinejastore.lovable.app/login?cadastro=1">Criar minha Vitrine →</a>
 </div>
 <script>
   // Cole aqui a URL pública do vídeo explicativo quando ele estiver pronto.
@@ -892,10 +892,8 @@ footer{ background:linear-gradient(180deg,#0a0d1c 0%, #05060c 100%); border-top:
   // ======= CTA DE CRIAÇÃO =======
   const CREATE_STORE_URL = "https://vitrinejastore.lovable.app/login?cadastro=1";
 
-  document.querySelectorAll("[data-cta]").forEach(btn => {
-    btn.addEventListener("click", () => {
-      window.location.assign(CREATE_STORE_URL);
-    });
+  document.querySelectorAll("[data-cta]").forEach(link => {
+    link.href = CREATE_STORE_URL;
   });
 
 
