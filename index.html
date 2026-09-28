@@ -1029,7 +1029,7 @@ a:focus-visible,button:focus-visible{outline:3px solid #8056e8;outline-offset:4p
   // Medição própria da jornada. O pixel Meta existente não é alterado.
   const funnelEndpoint = "https://app.vitrineja.store/api/public/funnel-event";
   function recordFunnel(event_name) {
-    const payload = JSON.stringify({ visitor_id: clickId, event_name });
+    const payload = JSON.stringify({ visitor_id: clickId, event_name, ...(event_name === "lp_view" ? { utm_source: campaignParams.get("utm_source")?.slice(0, 120), utm_medium: campaignParams.get("utm_medium")?.slice(0, 120), utm_campaign: campaignParams.get("utm_campaign")?.slice(0, 120) } : {}) });
     if (navigator.sendBeacon?.(funnelEndpoint, new Blob([payload], { type: "text/plain" }))) return;
     fetch(funnelEndpoint, { method: "POST", body: payload, headers: { "content-type": "text/plain" }, keepalive: true }).catch(() => {});
   }
