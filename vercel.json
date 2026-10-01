@@ -6,6 +6,14 @@
       "destination": "/index.html"
     },
     {
+      "source": "/privacidade",
+      "destination": "/privacidade.html"
+    },
+    {
+      "source": "/termos",
+      "destination": "/termos.html"
+    },
+    {
       "source": "/:path*",
       "destination": "https://app.vitrineja.store/:path*"
     }
