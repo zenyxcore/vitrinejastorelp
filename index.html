@@ -1008,25 +1008,6 @@ a:focus-visible,button:focus-visible{outline:3px solid #8056e8;outline-offset:4p
 <a class="btn btn-primary" data-cta="" href="https://app.vitrineja.store/login?cadastro=1">Começar grátis <span aria-hidden="true">→</span></a>
 </div>
 <script>
-  // Cole a URL HTTPS direta de um vídeo MP4/WebM. Não use a URL de uma página do YouTube.
-  const EXPLAINER_VIDEO_URL = "";
-  if (EXPLAINER_VIDEO_URL) {
-    const video = document.getElementById("vitrine-video");
-    try {
-      const url = new URL(EXPLAINER_VIDEO_URL);
-      if (url.protocol === "https:") {
-        video.addEventListener("loadedmetadata", () => {
-          if (video.videoHeight > video.videoWidth) document.getElementById("vitrine-video-section").classList.add("portrait-video");
-        });
-        video.src = url.href;
-        document.getElementById("vitrine-video-section").hidden = false;
-        video.addEventListener("error", () => {
-          document.getElementById("video-error").hidden = false;
-        });
-      }
-    } catch { /* Keep the usable steps if the video URL is invalid. */ }
-  }
-
   // ======= CTA DE CRIAÇÃO =======
   const CREATE_STORE_URL = "https://app.vitrineja.store/login?cadastro=1";
   const signupUrl = new URL(CREATE_STORE_URL);
@@ -1061,6 +1042,38 @@ a:focus-visible,button:focus-visible{outline:3px solid #8056e8;outline-offset:4p
   }
   recordFunnel("lp_view");
   document.querySelectorAll("[data-cta]").forEach(link => link.addEventListener("click", () => recordFunnel("cta_click")));
+
+
+  // Player managed by the superadmin. Missing SQL/config keeps this slot hidden.
+  fetch("https://app.vitrineja.store/api/public/lp-video")
+    .then(response => response.ok ? response.json() : null)
+    .then(config => {
+      if (!config?.enabled) return;
+      const frame = document.getElementById("vitrine-video-section");
+      const iframe = document.createElement("iframe");
+      const playerUrl = new URL("https://app.vitrineja.store/video/lp");
+      playerUrl.searchParams.set("visitor", clickId);
+      for (const key of ["utm_source","utm_medium","utm_campaign","utm_content","utm_term"]) {
+        const value=campaignParams.get(key); if(value)playerUrl.searchParams.set(key,value.slice(0,150));
+      }
+      iframe.src = playerUrl.toString();
+      iframe.title = config.title || "Vídeo VitrineJá";
+      iframe.allow = "fullscreen";
+      iframe.loading = "lazy";
+      iframe.style.cssText = "display:block;width:100%;height:100%;border:0;";
+      frame.replaceChildren(iframe);
+      frame.style.cssText = "max-width:900px;margin-inline:auto;overflow:hidden;border-radius:20px;background:#100f1c;aspect-ratio:16/9;";
+      frame.hidden = false;
+      window.addEventListener("message", event => {
+        if(event.origin !== "https://app.vitrineja.store" || event.source !== iframe.contentWindow) return;
+        if(event.data?.type === "vj-video-cta") recordFunnel("cta_click");
+        if(event.data?.type === "vj-video-size" && Number.isFinite(event.data.ratio) && event.data.ratio>0) {
+          const width=Math.min(frame.clientWidth,900);
+          frame.style.aspectRatio="auto";
+          frame.style.height=(Math.min(650,width/event.data.ratio)+76)+"px";
+        }
+      });
+    }).catch(() => {});
 
   // ======= NAVBAR SCROLLED STATE =======
   const navbar = document.getElementById("navbar");
