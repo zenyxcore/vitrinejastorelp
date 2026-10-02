@@ -2,11 +2,22 @@
 
 <html lang="pt-BR">
 <head>
-<script>
-!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
-fbq('init','1055273907292998');
-fbq('track','PageView');
+<!-- Meta Pixel Code — VitrineJá -->
+<script data-vitrine-meta-pixel>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window,document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq.disablePushState = true;
+fbq('set', 'autoConfig', false, '1213678887981871');
+fbq('init', '1213678887981871');
+fbq('trackSingle', '1213678887981871', 'PageView');
 </script>
+<!-- End Meta Pixel Code -->
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
 <title>Crie sua vitrine online por R$37 | VitrineJá</title>
@@ -794,6 +805,7 @@ a:focus-visible,button:focus-visible{outline:3px solid #8056e8;outline-offset:4p
 .footer-legal{display:flex;flex-wrap:wrap;gap:8px 24px;width:100%;justify-content:center;padding:18px 0 0;border-top:1px solid rgba(255,255,255,.12)}.footer-legal a{color:#b8b5c9;font-size:.85rem;min-height:44px;display:inline-flex;align-items:center;text-decoration:none}.footer-legal a:hover{color:#fff;text-decoration:underline}.footer-legal a:focus-visible{outline:2px solid #a78bfa;outline-offset:4px}</style>
 </head>
 <body>
+<noscript><img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=1213678887981871&amp;ev=PageView&amp;noscript=1"/></noscript>
 <nav class="navbar" id="navbar">
 <div class="container nav-inner">
 <a class="nav-logo" href="#top">
@@ -1033,7 +1045,7 @@ a:focus-visible,button:focus-visible{outline:3px solid #8056e8;outline-offset:4p
   });
 
 
-  // Medição própria da jornada. O pixel Meta existente não é alterado.
+  // Medição própria da jornada, independente do Pixel Meta.
   const funnelEndpoint = "https://app.vitrineja.store/api/public/funnel-event";
   function recordFunnel(event_name) {
     const payload = JSON.stringify({ visitor_id: clickId, event_name, ...(event_name === "lp_view" ? { utm_source: campaignParams.get("utm_source")?.slice(0, 120), utm_medium: campaignParams.get("utm_medium")?.slice(0, 120), utm_campaign: campaignParams.get("utm_campaign")?.slice(0, 120) } : {}) });
